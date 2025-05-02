@@ -8,4 +8,8 @@
 class OpenSocket;
 int openSocket(const char* interfacename);
 int sock;
+int socklen;
+int sockaddr_len;
+const char*interfacename;
+bool isopen;
 #endif //OPENSOCKET
