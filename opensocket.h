@@ -6,10 +6,12 @@
 #define OPRNSOCKET.H
 
 class OpenSocket;
+
 int openSocket(const char* interfacename);
-int sock;
-int socklen;
-int sockaddr_len;
-const char*interfacename;
-bool isopen;
-#endif //OPENSOCKET
+
+static int sock;
+static int socklen;
+static int sockaddr_len;
+static bool isopen;
+
+#endif //OPENSOCKET.H

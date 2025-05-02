@@ -14,10 +14,10 @@
 
 
 int openSocket(const char*interfacename) {
-    int sock = socket(PF_CAN, SOCK_RAW, CAN_RAW);
-    int socklen = sizeof(struct can_frame);
-    int sockaddr_len = sizeof(struct sockaddr_can);
-    bool isopen;
+static int sock = socket(PF_CAN, SOCK_RAW, CAN_RAW);
+static int socklen = sizeof(struct can_frame);
+static int sockaddr_len = sizeof(struct sockaddr_can);
+static bool isopen;
     if (sock < 0) {
         isopen = false;
         throw std::runtime_error("Failed to open socket if you read this the program executes");
