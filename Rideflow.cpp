@@ -1,4 +1,4 @@
-//This is the Mac Daddy of this program nigger. Uses QT
+//This is the Mac Daddy of this program. Uses QT
 #include <iostream>
 #include "opensocket.h"
 using namespace std;
