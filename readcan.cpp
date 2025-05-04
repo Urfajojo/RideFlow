@@ -3,77 +3,35 @@
 //
 
 #include "readcan.h"
-
 #include <iostream>
-#include <libsocketcan.h>
 #include <unistd.h>
 #include <sys/socket.h>
 #include "opensocket.h"
-#include <net/if.h>
-
+#include <linux/can.h>
 #include "ctgmath"
- struct CANTxFrame{
-    struct {
-        uint8_t DLC:4; /**< @brief Data length. */
-        uint8_t RTR:1; /**< @brief Frame type. */
-        uint8_t IDE:1; /**< @brief Identifier type. */
-    };
-    union {
-        struct {
-            uint32_t SID:11; /**< @brief Standard identifier.*/
-        };
-        struct {
-            uint32_t EID:29; /**< @brief Extended identifier.*/
-        };
-    };
-    union {
-        uint8_t data8[8]; /**< @brief Frame data. */
-        uint16_t data16[4]; /**< @brief Frame data. */
-        uint32_t data32[2]; /**< @brief Frame data. */
-    };
-};
-struct CANRxFrame{
-    struct {
-        uint8_t DLC:4; /**< @brief Data length. */
-        uint8_t RTR:1; /**< @brief Frame type. */
-        uint8_t IDE:1; /**< @brief Identifier type. */
-    };
-    union {
-        struct {
-            uint32_t SID:11; /**< @brief Standard identifier.*/
-        };
-        struct {
-            uint32_t EID:29; /**< @brief Extended identifier.*/
-        };
-    };
-    union {
-        uint8_t data8[8]; /**< @brief Frame data. */
-        uint16_t data16[4]; /**< @brief Frame data. */
-        uint32_t data32[2]; /**< @brief Frame data. */
-    };
-};
-uint32_t sendcan(CANTxFrame *txFrame) {
+
+int sendcan(can_frame) {
     if (isopen == false) {
         std::cout << "CAN Bus inactive";
         throw std::runtime_error("CAN Bus Inactive");
     }else;
-    uint32_t bytes = send(sock, txFrame , sizeof(txFrame->data32), 0);
-    if (bytes != sizeof(txFrame->data32)) {
-        std::cerr << "CAN Send Error" << std::endl;
+    int bytes = send(sock, &frame , sizeof(can_frame), 0);
+    if (bytes != sizeof(can_frame)) {
+        std::cout << "CAN Bus Error";
+        throw std::runtime_error("CAN Bus Error");
     }
 return bytes;
 }
 
-uint32_t readcan(CANRxFrame *rxFrame) {
+int readcan(can_frame) {
     if (isopen == false) {
         std::cout << "CAN Bus Inactive";
         throw std::runtime_error("CAN Bus Inactive"); //Error throw
     }
-    uint32_t bytes = read(sock, rxFrame, sizeof(rxFrame->data32)); //Fills the RX frame with read data
-    if (bytes != sizeof(rxFrame->data32)) {
+    int bytes = read(sock, &frame, sizeof(can_frame)); //Fills the RX frame with read data
+    if (bytes != sizeof(can_frame)) {
         std::cout << "Empty Message";
         throw std::runtime_error("Empty Message"); //Empty message error
     }
-
 return bytes; // Sends the data with an 8 bit unsigned integer
 }

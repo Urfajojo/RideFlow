@@ -152,4 +152,14 @@ CMakeFiles/RideFlow.dir/Rideflow.cpp.o: \
  /usr/include/c++/12/bits/basic_ios.tcc \
  /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
  /usr/include/c++/12/bits/istream.tcc \
- /mnt/c/Users/Owner/CLionProjects/RideFlow/opensocket.h
+ /mnt/c/Users/Owner/CLionProjects/RideFlow/opensocket.h \
+ /mnt/c/Users/Owner/CLionProjects/RideFlow/readcan.h \
+ /usr/include/linux/can.h /usr/include/linux/types.h \
+ /usr/include/x86_64-linux-gnu/asm/types.h \
+ /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
+ /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types.h \
+ /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
+ /usr/include/asm-generic/posix_types.h /usr/include/linux/socket.h

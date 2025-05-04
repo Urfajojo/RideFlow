@@ -1,11 +1,13 @@
 //
 // Created by Owner on 4/30/2025.
 //
-
+#pragma once
 #ifndef READCAN_H
 #define READCAN_H
-class readcan(CanRxFrame* rxframe);
-class sendcan(CanTxFrame* txframe);
-struct CANRxFrame;
-struct CANTxFrame;
-#endif //READCAN_H
+#include <cstdint>
+#include <linux/can.h>
+class ReadCan;
+inline can_frame frame;
+int readcan(can_frame);
+int sendcan(can_frame);
+#endif READCAN_H
