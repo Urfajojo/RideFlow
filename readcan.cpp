@@ -52,21 +52,25 @@ struct CANRxFrame{
         uint32_t data32[2]; /**< @brief Frame data. */
     };
 };
-int sendcan(CANTxFrame *txFrame) {
+uint32_t sendcan(CANTxFrame *txFrame) {
     if (isopen == false) {
         std::cout << "CAN Bus inactive";
         throw std::runtime_error("CAN Bus Inactive");
     }else;
-    return 1;
+    uint32_t bytes = send(sock, txFrame , sizeof(txFrame->data32), 0);
+    if (bytes != sizeof(txFrame->data32)) {
+        std::cerr << "CAN Send Error" << std::endl;
+    }
+return bytes;
 }
 
-uint8_t readcan(CANRxFrame *rxFrame) {
+uint32_t readcan(CANRxFrame *rxFrame) {
     if (isopen == false) {
         std::cout << "CAN Bus Inactive";
         throw std::runtime_error("CAN Bus Inactive"); //Error throw
     }
-    uint8_t bytes = read(sock, rxFrame, sizeof(rxFrame->data8)); //Fills the RX frame with read data
-    if (bytes != sizeof(rxFrame->data8)) {
+    uint32_t bytes = read(sock, rxFrame, sizeof(rxFrame->data32)); //Fills the RX frame with read data
+    if (bytes != sizeof(rxFrame->data32)) {
         std::cout << "Empty Message";
         throw std::runtime_error("Empty Message"); //Empty message error
     }

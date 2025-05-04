@@ -4,6 +4,9 @@
 using namespace std;
 int main(){
     openSocket("can0");
+    while (isopen) {
+    readcan();
+    }
     return 0;
 
 }
