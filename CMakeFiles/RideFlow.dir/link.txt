@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/RideFlow.dir/Rideflow.cpp.o CMakeFiles/RideFlow.dir/opensocket.cpp.o CMakeFiles/RideFlow.dir/readcan.cpp.o -o RideFlow 
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/RideFlow.dir/link.d CMakeFiles/RideFlow.dir/Rideflow.cpp.o CMakeFiles/RideFlow.dir/conn_can/can.cpp.o CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o -o RideFlow

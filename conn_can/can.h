@@ -10,13 +10,16 @@
 
 
 class can {
-    public:
-    struct can_frame frame;     /* CAN FRAME */
-    int can_open_socket(char ifname );  /* Opens Can Socket and returns an integer FD (File Descriptor) */
+public:
+    static can currentcan;  /* Instead of creating new objects, use this*/
+    static can_frame frame; /* CAN TX FRAME */
+    static can_frame received_frame; /* CAN RX FRAME */
+    int can_open_socket(const char* ifname );  /* Opens Can Socket and returns an integer FD (File Descriptor) */
     int can_close_socket(int canfd); /* Closes CAN socket and returns 1 */
     int can_send(struct can_frame *frame);     /*Sends a filled CAN frame, returns nbyte when successfully executed */
-    bool can_receive(can_frame& out_frame);  /* Fills a CAN buffer, returns true when successfully executed */
+    int can_receive();  /* Fills a CAN buffer, returns true when successfully executed */
     uint32_t float2int(float val);  /* Converts Float to Unsigned 32-bit integer */
+    void cansendtest(int sock); /* Constantly reads and sends dummy CAN packets*/
 
     int getsockfd() {
         return sockfd;

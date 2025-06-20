@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/RideFlow.dir/Rideflow.cpp.o CMakeFiles/RideFlow.dir/opensocket.cpp.o CMakeFiles/RideFlow.dir/readcan.cpp.o -o RideFlow 

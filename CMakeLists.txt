@@ -4,8 +4,8 @@ project(RideFlow)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(RideFlow Rideflow.cpp
-        opensocket.cpp
-        opensocket.h
-        readcan.cpp
-        readcan.h
+        conn_can/can.cpp
+        conn_can/can.h
+        conn_can/mcu_can_frame.cpp
+        conn_can/mcu_can_frame.h
 )

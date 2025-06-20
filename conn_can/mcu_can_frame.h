@@ -28,6 +28,7 @@ class mcu_can_frame {
         int tachometer;
         int tachometer_abs;
     } mc_values;
+    const mc_values telemetryframe;
     int wheel_diameter;
     float speed(float rpm){
         return (rpm * 3.14 * wheel_diameter *2.54 * 60)/1000;

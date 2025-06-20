@@ -1,3 +1,0 @@
-/mnt/c/Users/Owner/CLionProjects/RideFlow/cmake-build-debug/CMakeFiles/RideFlow.dir
-/mnt/c/Users/Owner/CLionProjects/RideFlow/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Owner/CLionProjects/RideFlow/cmake-build-debug/CMakeFiles/rebuild_cache.dir

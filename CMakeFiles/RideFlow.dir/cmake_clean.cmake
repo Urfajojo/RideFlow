@@ -1,10 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/RideFlow.dir/link.d"
   "CMakeFiles/RideFlow.dir/Rideflow.cpp.o"
   "CMakeFiles/RideFlow.dir/Rideflow.cpp.o.d"
-  "CMakeFiles/RideFlow.dir/opensocket.cpp.o"
-  "CMakeFiles/RideFlow.dir/opensocket.cpp.o.d"
-  "CMakeFiles/RideFlow.dir/readcan.cpp.o"
-  "CMakeFiles/RideFlow.dir/readcan.cpp.o.d"
+  "CMakeFiles/RideFlow.dir/conn_can/can.cpp.o"
+  "CMakeFiles/RideFlow.dir/conn_can/can.cpp.o.d"
+  "CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o"
+  "CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o.d"
   "RideFlow"
   "RideFlow.pdb"
 )
