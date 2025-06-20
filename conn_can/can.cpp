@@ -74,7 +74,7 @@ void can::queueFrame(struct can_frame& frame) {
 void can::sendFrame(struct can_frame frame) {
     if (!txBuffer.empty()) {
         can_frame tx = txBuffer.front();
-        ssize_t bytes = can::can_send(&tx);
+        ssize_t bytes = can_send(&tx);
         if (bytes == sizeof(tx)) {
             txBuffer.pop();
         } else {
@@ -87,7 +87,7 @@ bool can::haspendingframes() const {
     return !txBuffer.empty();
 }
 
-can_frame recived_frame;
+can_frame can::received_frame;
 
 int can::can_receive() {
     ssize_t bytes = read(canfd, &received_frame, sizeof(received_frame));
@@ -102,7 +102,7 @@ int can::can_receive() {
 }
 
 void can::cansendtest(int sock) {
-    std::cout << "CAN Daemon test" << std::endl;
+    std::cout << "CAN Daemon send test" << std::endl;
     can_frame testframe;
     testframe.can_id = 0x12;
     testframe.can_dlc = 2;
@@ -123,6 +123,15 @@ void can::cansendtest(int sock) {
 }
 
 
+void can::canreadtest(int sock) {
+    std::cout << "CAN Daemon read test" << std::endl;
+    while (true) {
+        if (can_receive() > 0) {
+            std::cout << "Frame detected" << std::endl;
+            sleep(0.5);
+        }
+    }
+}
 
 
 

@@ -18,9 +18,9 @@ class mcu_can_frame {
         float temp_mos6;
         float temp_pcb;
         uint16_t current_motor;
-        uint16_t current_in;
-        uint32_t rpm;
-        uint16_t duty_now;
+        mutable uint16_t current_in;
+        mutable uint32_t rpm;
+        mutable uint16_t duty_now;
         float amp_hours;
         float amp_hours_charged;
         float watt_hours;
