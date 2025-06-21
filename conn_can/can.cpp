@@ -127,7 +127,7 @@ void can::canreadtest(int sock) {
     std::cout << "CAN Daemon read test" << std::endl;
     while (true) {
         if (can_receive() > 0) {
-            std::cout << "Frame detected" << std::endl;
+            std::cout << "Frame detected from" << received_frame.can_id << std::endl;
             sleep(0.5);
         }
     }

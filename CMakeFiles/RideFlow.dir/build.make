@@ -128,6 +128,17 @@ RideFlow: CMakeFiles/RideFlow.dir/conn_can/can.cpp.o
 RideFlow: CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o
 RideFlow: CMakeFiles/RideFlow.dir/build.make
 RideFlow: CMakeFiles/RideFlow.dir/compiler_depend.ts
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6QmlMeta.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6QmlWorkerScript.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.8.2
+RideFlow: /usr/lib/x86_64-linux-gnu/libGLX.so
+RideFlow: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
 RideFlow: CMakeFiles/RideFlow.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable RideFlow"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RideFlow.dir/link.txt --verbose=$(VERBOSE)

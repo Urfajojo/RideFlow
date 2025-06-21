@@ -26,20 +26,20 @@ public:
         return sockfd;
     }
 
-    int can_receive(int _cpp_par_);
 
     int canfd;  /* CAN File Descriptor */
     uint8_t controller_id; /* VESC Controller_ID */
 
-    void queueFrame(struct can_frame &frame);
-    void sendFrame(struct can_frame frame);
-    bool haspendingframes() const;
+    void queueFrame(struct can_frame &frame);   /* TX Buffer, Queues up frames*/
+    void sendFrame(struct can_frame frame); /* Picks the front of the queue and sends it*/
+    bool haspendingframes() const;  /* Self explanatory */
 
 
 
 private:
     int sockfd; /*Secret Sock use getsockfd() to access */
     std::queue<struct can_frame> txBuffer;  /*TX Queue, prevents memory violations */
+    std::vector<struct can_frame> rxBuffer; /*RX Buffer*/
 
 };
 
