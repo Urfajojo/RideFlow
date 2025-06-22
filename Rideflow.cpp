@@ -17,6 +17,8 @@ int main(int argc, char *argv[]){
 
     engine.rootContext()->setContextProperty("telemetry", &telemetry);
 
+    qmlRegisterUncreatableType<TelemetryModel>("Telemetry", 1, 0, "TelemetryModel", "Accesed via context property");
+
     const QUrl url(u"MainWindow.qml"_qs);
 
     engine.load(url);

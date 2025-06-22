@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 2.15
-import QtQuick.Shapes
+import QtQuick.Shapes 6.5
 import QtQml
 
 Window {
@@ -54,23 +54,32 @@ Window {
                 anchors.centerIn: parent
                 anchors.fill: parent
 
-                ShapePath {
-                    strokeWidth: 10
-                    strokeColor: "white"
-                    Path{
-                        startX: 100; startY: 100
-                        property real speed: telemetry.speed
-                        PathAngleArc: {
-                            centerX: 100
-                            centerY: 100
-                            radiusX: 100
-                            radiusY: 100
-                            startAngle: -270
-                            sweepAngle: -270 * speed
-                        }
+                Shape {
+                    width: 200
+                    height: 200
+                    ShapePath {
+                        strokeWidth: 10
+                        strokeColor: "white"
+                        fillColor: "white"
+                        Path {
+                            startX: 150
+                            startY: 150
+                            PathAngleArc {
+                                centerX: 100
+                                centerY: 100
+                                radiusX: 80
+                                radiusY: 80
+                                startAngle: -135
+                                sweepAngle: 270
+                            }
 
+                            PathLine { x: 150; y: 150 }
+
+                        }
                     }
                 }
+
+
             }
 
             Item {
@@ -112,13 +121,14 @@ Window {
 
         Row {
             id: row
-            leftPadding: 5
-            topPadding: 5
+            leftPadding: 0
+            topPadding: 0
             layoutDirection: Qt.LeftToRight
             spacing: 0
 
             Text {
                 id: clock
+                x: 0
                 width: 80
                 height: 25
                 color: "#ffffff"
