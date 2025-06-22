@@ -72,10 +72,24 @@ include CMakeFiles/RideFlow.dir/flags.make
 CMakeFiles/RideFlow.dir/codegen:
 .PHONY : CMakeFiles/RideFlow.dir/codegen
 
+CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o: CMakeFiles/RideFlow.dir/flags.make
+CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o: RideFlow_autogen/mocs_compilation.cpp
+CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o: CMakeFiles/RideFlow.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o -MF CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o -c /home/vboxuser/RideFlow/RideFlow_autogen/mocs_compilation.cpp
+
+CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/RideFlow/RideFlow_autogen/mocs_compilation.cpp > CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/RideFlow/RideFlow_autogen/mocs_compilation.cpp -o CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/RideFlow.dir/Rideflow.cpp.o: CMakeFiles/RideFlow.dir/flags.make
 CMakeFiles/RideFlow.dir/Rideflow.cpp.o: Rideflow.cpp
 CMakeFiles/RideFlow.dir/Rideflow.cpp.o: CMakeFiles/RideFlow.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RideFlow.dir/Rideflow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RideFlow.dir/Rideflow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RideFlow.dir/Rideflow.cpp.o -MF CMakeFiles/RideFlow.dir/Rideflow.cpp.o.d -o CMakeFiles/RideFlow.dir/Rideflow.cpp.o -c /home/vboxuser/RideFlow/Rideflow.cpp
 
 CMakeFiles/RideFlow.dir/Rideflow.cpp.i: cmake_force
@@ -89,7 +103,7 @@ CMakeFiles/RideFlow.dir/Rideflow.cpp.s: cmake_force
 CMakeFiles/RideFlow.dir/conn_can/can.cpp.o: CMakeFiles/RideFlow.dir/flags.make
 CMakeFiles/RideFlow.dir/conn_can/can.cpp.o: conn_can/can.cpp
 CMakeFiles/RideFlow.dir/conn_can/can.cpp.o: CMakeFiles/RideFlow.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RideFlow.dir/conn_can/can.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RideFlow.dir/conn_can/can.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RideFlow.dir/conn_can/can.cpp.o -MF CMakeFiles/RideFlow.dir/conn_can/can.cpp.o.d -o CMakeFiles/RideFlow.dir/conn_can/can.cpp.o -c /home/vboxuser/RideFlow/conn_can/can.cpp
 
 CMakeFiles/RideFlow.dir/conn_can/can.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/RideFlow.dir/conn_can/can.cpp.s: cmake_force
 CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o: CMakeFiles/RideFlow.dir/flags.make
 CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o: conn_can/mcu_can_frame.cpp
 CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o: CMakeFiles/RideFlow.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o -MF CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o.d -o CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o -c /home/vboxuser/RideFlow/conn_can/mcu_can_frame.cpp
 
 CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.i: cmake_force
@@ -114,18 +128,36 @@ CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/RideFlow/conn_can/mcu_can_frame.cpp -o CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.s
 
+CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o: CMakeFiles/RideFlow.dir/flags.make
+CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o: conn_can/TelemetryModel.cpp
+CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o: CMakeFiles/RideFlow.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o -MF CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o.d -o CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o -c /home/vboxuser/RideFlow/conn_can/TelemetryModel.cpp
+
+CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vboxuser/RideFlow/conn_can/TelemetryModel.cpp > CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.i
+
+CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vboxuser/RideFlow/conn_can/TelemetryModel.cpp -o CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.s
+
 # Object files for target RideFlow
 RideFlow_OBJECTS = \
+"CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/RideFlow.dir/Rideflow.cpp.o" \
 "CMakeFiles/RideFlow.dir/conn_can/can.cpp.o" \
-"CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o"
+"CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o" \
+"CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o"
 
 # External object files for target RideFlow
 RideFlow_EXTERNAL_OBJECTS =
 
+RideFlow: CMakeFiles/RideFlow.dir/RideFlow_autogen/mocs_compilation.cpp.o
 RideFlow: CMakeFiles/RideFlow.dir/Rideflow.cpp.o
 RideFlow: CMakeFiles/RideFlow.dir/conn_can/can.cpp.o
 RideFlow: CMakeFiles/RideFlow.dir/conn_can/mcu_can_frame.cpp.o
+RideFlow: CMakeFiles/RideFlow.dir/conn_can/TelemetryModel.cpp.o
 RideFlow: CMakeFiles/RideFlow.dir/build.make
 RideFlow: CMakeFiles/RideFlow.dir/compiler_depend.ts
 RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2
@@ -140,7 +172,7 @@ RideFlow: /usr/lib/x86_64-linux-gnu/libGLX.so
 RideFlow: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 RideFlow: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
 RideFlow: CMakeFiles/RideFlow.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable RideFlow"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vboxuser/RideFlow/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable RideFlow"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RideFlow.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

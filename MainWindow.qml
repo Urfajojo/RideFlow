@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 2.15
 import QtQuick.Shapes
+import QtQml
 
 Window {
     id: window
@@ -36,13 +37,69 @@ Window {
         }
     }
 
+    Item {
+        id: swipingarea
+        x: 10
+        y: 47
+        width: 380
+        height: 405
+
+        SwipeView {
+            id: swipeView
+            anchors.fill: parent
+            currentIndex: 0
+
+            Item {
+                id: overview
+                anchors.centerIn: parent
+                anchors.fill: parent
+
+                ShapePath {
+                    strokeWidth: 10
+                    strokeColor: "white"
+                    Path{
+                        startX: 100; startY: 100
+                        property real speed: telemetry.speed
+                        PathAngleArc: {
+                            centerX: 100
+                            centerY: 100
+                            radiusX: 100
+                            radiusY: 100
+                            startAngle: -270
+                            sweepAngle: -270 * speed
+                        }
+
+                    }
+                }
+            }
+
+            Item {
+                id: settings
+                anchors.centerIn: parent
+                anchors.fill: parent
+            }
+        }
+    }
+
+    Rectangle {
+        id: speedclusterbackdrop
+        width: 380
+        height: 405
+        opacity: 0.303
+        color: "#252526"
+        border.width: 0
+        anchors.centerIn: parent
+    }
+
     Column {
         id: column
-        anchors.fill: parent
-        anchors.leftMargin: 0
-        anchors.rightMargin: 0
-        anchors.topMargin: 2
-        anchors.bottomMargin: -2
+        width: 400
+        height: 500
+        anchors.top: parent.top
+        anchors.topMargin: 0
+        spacing: 0
+        leftPadding: 10
+        topPadding: 5
 
 
 
@@ -55,32 +112,10 @@ Window {
 
         Row {
             id: row
-            width: 400
-            height: 35
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            Image {
-                id: image
-                width: 100
-                height: 35
-                source: "resources/CAN_Logo.svg"
-                sourceSize.height: 80
-                sourceSize.width: 80
-                fillMode: Image.PreserveAspectFit
-            }
+            leftPadding: 5
+            topPadding: 5
+            layoutDirection: Qt.LeftToRight
+            spacing: 0
 
             Text {
                 id: clock
@@ -94,24 +129,16 @@ Window {
                     repeat: true
                     onTriggered: clock.text = Qt.formatTime(new Date(), ("hh:mm"))
                 }
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.left: parent.left
-                anchors.leftMargin: 5
                 font.pixelSize: 20
                 verticalAlignment: Text.AlignVCenter
-                anchors.verticalCenterOffset: 1
                 font.styleName: "Bold"
             }
 
         }
 
-        Item {
-            id: speedcluster
-            width: 200
-            height: 200
-        }
-
 
     }
+
+
 
 }

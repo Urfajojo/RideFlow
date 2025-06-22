@@ -1,3 +1,5 @@
 /home/vboxuser/RideFlow/CMakeFiles/RideFlow.dir
 /home/vboxuser/RideFlow/CMakeFiles/edit_cache.dir
 /home/vboxuser/RideFlow/CMakeFiles/rebuild_cache.dir
+/home/vboxuser/RideFlow/CMakeFiles/RideFlow_autogen_timestamp_deps.dir
+/home/vboxuser/RideFlow/CMakeFiles/RideFlow_autogen.dir

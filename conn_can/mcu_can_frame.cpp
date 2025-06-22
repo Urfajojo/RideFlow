@@ -9,6 +9,8 @@
 #include "can.h"
 
 mcu_can_frame::mc_values telemetryframe;
+mcu_can_frame mcu_can_frame::telemetryfunc;
+
 
 void mcu_can_frame::telemetry(can_frame frame) {
     uint16_t current;

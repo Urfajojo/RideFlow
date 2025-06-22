@@ -4,11 +4,18 @@
 #include "conn_can/mcu_can_frame.h"
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "conn_can/TelemetryModel.h"
 
 using namespace std;
 int main(int argc, char *argv[]){
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
+
+    TelemetryModel telemetry;
+    can::currentcan.can_open_socket("vcan0");
+
+    engine.rootContext()->setContextProperty("telemetry", &telemetry);
 
     const QUrl url(u"MainWindow.qml"_qs);
 
@@ -17,7 +24,8 @@ int main(int argc, char *argv[]){
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }
-    can::currentcan.can_open_socket("vcan0");
+
+
     return app.exec();
 
 }

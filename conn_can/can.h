@@ -32,7 +32,7 @@ public:
 
     void queueFrame(struct can_frame &frame);   /* TX Buffer, Queues up frames*/
     void sendFrame(struct can_frame frame); /* Picks the front of the queue and sends it*/
-    bool haspendingframes() const;  /* Self explanatory */
+    bool haspendingframes() const;  /* Self-explanatory */
 
 
 

@@ -16,7 +16,10 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
+#include "mcu_can_frame.h"
+
 can can::currentcan;
+
 
 int can::can_open_socket(const char* ifname) {
     struct sockaddr_can addr;
@@ -128,6 +131,9 @@ void can::canreadtest(int sock) {
     while (true) {
         if (can_receive() > 0) {
             std::cout << "Frame detected from" << received_frame.can_id << std::endl;
+            mcu_can_frame::telemetryfunc.telemetry(received_frame);
+            mcu_can_frame::telemetryfunc.wheel_diameter = 29;
+            std::cout << mcu_can_frame::telemetryfunc.telemetryframe.speed << std::endl;
             sleep(0.5);
         }
     }
