@@ -5,7 +5,8 @@
 #ifndef MCU_CAN_FRAME_H
 #define MCU_CAN_FRAME_H
 #include <cstdint>
-#include <QObject>
+#include <math.h>
+#include <bits/chrono.h>
 #include <linux/can.h>
 
 class mcu_can_frame {
@@ -41,6 +42,7 @@ class mcu_can_frame {
         float wheel_circ = wheel_diameter * 0.0254f *3.14159f;
         float speed_m_per_min = rpm * wheel_circ;
         float speed_kmh = (speed_m_per_min * 60) / 1000;
+        speed_kmh = std::ceil(speed_kmh * 100) / 100.0f;
         return speed_kmh;
     };  /* Calculates speed in km/h using wheel diameter (inches) */
     void telemetry(can_frame frame); /* Fills telemetry */

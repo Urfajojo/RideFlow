@@ -13,7 +13,7 @@ Window {
 
 
     Rectangle {
-        id: rectangle
+        id: bg
         visible: true
         anchors.fill: parent
         gradient: Gradient {
@@ -35,6 +35,18 @@ Window {
             anchors.rightMargin: 0
             anchors.topMargin: 0
         }
+
+        Rectangle {
+            id: speedclusterbackdrop
+            x: 10
+            y: 47
+            width: 380
+            height: 405
+            opacity: 0.303
+            color: "#252526"
+            border.width: 0
+            anchors.centerIn: parent
+        }
     }
 
     Item {
@@ -54,29 +66,14 @@ Window {
                 anchors.centerIn: parent
                 anchors.fill: parent
 
-                Shape {
-                    width: 200
-                    height: 200
-                    ShapePath {
-                        strokeWidth: 10
-                        strokeColor: "white"
-                        fillColor: "white"
-                        Path {
-                            startX: 150
-                            startY: 150
-                            PathAngleArc {
-                                centerX: 100
-                                centerY: 100
-                                radiusX: 80
-                                radiusY: 80
-                                startAngle: -135
-                                sweepAngle: 270
-                            }
-
-                            PathLine { x: 150; y: 150 }
-
-                        }
-                    }
+                Text {
+                    anchors.centerIn: parent
+                    id: speedindicator
+                    color: "#ffffff"
+                    text: telemetry.speed
+                    font.pixelSize: 36
+                    z: 10
+                    font.styleName: "Bold"
                 }
 
 
@@ -88,17 +85,18 @@ Window {
                 anchors.fill: parent
             }
         }
+
+        PageIndicator {
+            id: pageIndicator
+            x: 173
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: -30
+            enabled: true
+            interactive: false
+            count: 2
+        }
     }
 
-    Rectangle {
-        id: speedclusterbackdrop
-        width: 380
-        height: 405
-        opacity: 0.303
-        color: "#252526"
-        border.width: 0
-        anchors.centerIn: parent
-    }
 
     Column {
         id: column
