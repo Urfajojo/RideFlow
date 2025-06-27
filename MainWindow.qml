@@ -70,9 +70,20 @@ Window {
                     anchors.centerIn: parent
                     id: speedindicator
                     color: "#ffffff"
-                    text: telemetry.speed
-                    font.pixelSize: 36
+                    text: qsTr(telemetry.speed)
+                    font.pixelSize: 72
+                    anchors.verticalCenterOffset: -16
                     z: 10
+                    font.styleName: "Bold"
+                }
+
+                Text {
+                    id: text1
+                    color: "#ffffff"
+                    text: qsTr("km/H")
+                    font.pixelSize: 24
+                    anchors.verticalCenterOffset: 40
+                    anchors.centerIn: parent
                     font.styleName: "Bold"
                 }
 
@@ -94,6 +105,7 @@ Window {
             enabled: true
             interactive: false
             count: 2
+            currentIndex: swipeView.currentIndex
         }
     }
 

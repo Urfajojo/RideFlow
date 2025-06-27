@@ -42,7 +42,7 @@ int can::can_open_socket(const char* ifname) {
     }
     addr.can_ifindex = ifr.ifr_ifindex;
 
-    printf("%s at index %d\n", ifn, ifr.ifr_ifindex);
+    printf("%s bound to Can socket\n", ifname);
 
     if (bind(canfd, (struct sockaddr *)&addr, sizeof(addr)) == -1) {
         perror("Error in socket bind");
