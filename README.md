@@ -12,7 +12,7 @@ proposed features are, BLE and GPS, but they will be implemented later.
 ### Build & Run
 
 ```bash
-git clone https://github.com/yourname/RideFlow.git
+git clone https://github.com/urfajojo/RideFlow.git
 cd RideFlow
 mkdir build && cd build
 cmake ..
